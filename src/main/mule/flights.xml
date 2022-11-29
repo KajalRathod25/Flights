@@ -12,6 +12,9 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</flow>
 	<flow name="flightsFlow1" doc:id="d1ce9ecf-17cf-4a65-83af-fde4ae22dc66" >
 	</flow>
+	<flow name="flightsFlow5" doc:id="1e5667d7-7eab-4b60-bb91-8da5665e8519" >
+		<logger level="INFO" doc:name="Logger" doc:id="88216c48-440d-4be1-860b-6d74ffdf9871" />
+	</flow>
 	<flow name="flightsFlow4" doc:id="351ff6d0-1242-40f8-afe0-45582f3b5669" >
 		<http:request method="GET" doc:name="Request" doc:id="615b56db-fadc-4bf3-a098-d93cc5125f6c" />
 	</flow>
