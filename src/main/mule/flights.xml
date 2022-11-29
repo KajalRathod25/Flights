@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="bb8c138c-17c6-4f07-b16b-56e1176e1023" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="flightsFlow2" doc:id="39497e29-fb00-43dd-a64a-eaf55694cb60" >
+		<logger level="INFO" doc:name="Logger" doc:id="ba0c27bf-d540-4760-9d94-04fb1d7dbf06" />
+	</flow>
+	<flow name="flightsFlow1" doc:id="d1ce9ecf-17cf-4a65-83af-fde4ae22dc66" >
+	</flow>
+	<flow name="flightsFlow" doc:id="dd04edfc-f617-44f0-b100-3bd228513dd1" >
+		<http:listener doc:name="Listener" doc:id="3361e4d6-a098-420b-822d-5f6dc0f86719" config-ref="HTTP_Listener_config" path="/flight"/>
+		<logger level="INFO" doc:name="Logger" doc:id="0c72adaa-da00-4de4-9681-dfa15f46ff00" />
+	</flow>
+</mule>
